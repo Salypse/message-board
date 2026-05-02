@@ -1,9 +1,13 @@
 <html>
    <head>
-      <title>Template</title>
+      <title>Message Board</title>
       <link rel="stylesheet" href="/styles.css" />
    </head>
    <body>
-      <%= message %>
+      <% for (const message of messages) { %>
+         <li>User: <%= message.user %></li>
+         <li>Added: <%= message.added %></li>
+         <li>Message: <%= message.text %></li>
+      <% } %>
    </body>
 </html>
