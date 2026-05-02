@@ -1,16 +1,22 @@
 <html>
    <head>
       <title>Message Board</title>
-      <link rel="stylesheet" href="/styles.css" />
+      <link rel="stylesheet" href="/index.css" />
    </head>
    <body>
       <button>
          <a href="/new">New</a>
-      </button>   
+      </button> 
+      <ul>  
       <% for (const message of messages) { %>
-         <li>User: <%= message.user %></li>
-         <li>Added: <%= message.added %></li>
-         <li>Message: <%= message.text %></li>
+         <li>
+            <div class="message">
+               <p>User: <%= message.user %></p>
+               <p>Message: <%= message.text %></p>
+               <p>Added: <%= message.added %></p>
+            </div>
+         </li>
       <% } %>
+      </ul>
    </body>
 </html>
