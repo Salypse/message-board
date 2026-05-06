@@ -1,20 +1,31 @@
-<html>
-    <head>
-        <title>New Message</title>
-    </head>
-    <body>
-        <button>
-            <a href="/">Home</a>
-        </button>
-        <h2>New Message</h2>
-        <form method="POST" action="/new">
-            <label for="user">Name</label>
-            <input type="text" id="user" name="user" required>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Message</title>
+    <link rel="stylesheet" href="/root.css" />
+    <link rel="stylesheet" href="/form.css" />
+  </head>
+  <body>
+    <button>
+      <a href="/">Home</a>
+    </button>
+    <div class="new-message">
+      <h2>New Message</h2>
+      <form method="POST" action="/new ">
+        <div>
+          <label for="user">Name</label>
+          <input type="text" id="user" name="user" required />
+        </div>
 
-            <label for="message">Message</label>
-            <input type="text" id="message" name="message" required>
+        <div>
+          <label for="message">Message</label>
+          <input type="text" id="message" name="message" required />
+        </div>
 
-            <button type="submit">Submit</button>
-        </form>
-    </body>
+        <button type="submit" class="submit">Submit</button>
+      </form>
+    </div>
+  </body>
 </html>
