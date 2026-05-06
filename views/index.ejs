@@ -1,22 +1,27 @@
-<html>
-   <head>
-      <title>Message Board</title>
-      <link rel="stylesheet" href="/index.css" />
-   </head>
-   <body>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Message Board</title>
+   <link rel="stylesheet" href="/root.css" />
+   <link rel="stylesheet" href="/index.css" />
+</head>
+   <body class="index">
       <button>
          <a href="/new">New</a>
       </button> 
-      <ul>  
+      <ul class="message-list">  
       <% for (const message of messages) { %>
          <li>
             <div class="message">
-               <p>User: <%= message.user %></p>
-               <p>Message: <%= message.text %></p>
-               <p>Added: <%= message.added %></p>
+               <p class="user"><%= message.user %></p>
+               <p class="text"><%= message.text %></p>
+               <p class="date"><%= message.added %></p>
+               <div class="buttons">
                <button>
                   <a href="/details/<%= message.id %>">Details</a>
                </button>
+               </div>
             </div>
          </li>
       <% } %>
