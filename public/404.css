@@ -1,0 +1,15 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10vh;
+  text-align: center;
+
+  color: var(--dark-green);
+  font-size: clamp(1.3rem, 5vw, 1.7rem);
+  font-weight: bold;
+}
