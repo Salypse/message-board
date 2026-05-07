@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Details</title>
     <link rel="stylesheet" href="/root.css" />
+    <link rel="stylesheet" href="/navbar.css" />
     <link rel="stylesheet" href="/details.css" />
   </head>
   <body class="details">
-    <button>
-      <a href="/">Home</a>
-    </button>
+    <%- include("navbar") %>
     <div class="message-details">
       <p>Sent By: <%= message.user %></p>
       <p>Message: <%=message.text %></p>

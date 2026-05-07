@@ -4,12 +4,11 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Message Board</title>
    <link rel="stylesheet" href="/root.css" />
+   <link rel="stylesheet" href="/navbar.css" />
    <link rel="stylesheet" href="/index.css" />
 </head>
    <body class="index">
-      <button>
-         <a href="/new">New</a>
-      </button> 
+      <%- include("navbar") %>
       <ul class="message-list">  
       <% for (const message of messages) { %>
          <li>

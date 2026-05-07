@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New Message</title>
     <link rel="stylesheet" href="/root.css" />
+    <link rel="stylesheet" href="/navbar.css" />
     <link rel="stylesheet" href="/form.css" />
   </head>
   <body>
-    <button>
-      <a href="/">Home</a>
-    </button>
+    <%- include("navbar") %>
     <div class="new-message">
       <h2>New Message</h2>
       <form method="POST" action="/new ">

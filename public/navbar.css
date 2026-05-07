@@ -1,0 +1,29 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3vw;
+
+  width: 100%;
+  min-height: 4vh;
+  height: auto;
+  padding: 0.6vw 1vw;
+
+  background-color: var(--dark-green);
+  margin-bottom: 2vh;
+}
+
+nav a {
+  font-size: clamp(1rem, 3vw, 1.4rem);
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+nav a:hover {
+  color: var(--light-green);
+}
+
+nav a:active {
+  color: #ffffff;
+}
