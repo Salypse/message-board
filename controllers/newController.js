@@ -1,15 +1,13 @@
+const db = require("../db/queries");
+const formatDate = require("../utils/formatDate");
+
 exports.newGet = (req, res, next) => {
   res.render("form");
 };
 
 exports.newPost = (req, res, next) => {
   const { user, message } = req.body;
-  messages.push({
-    text: message,
-    user: user,
-    added: formatDate(new Date()),
-    id: messages.length + 1,
-  });
+  db.postNewMessage(user, message, formatDate(new Date()));
 
   res.redirect("/");
 };

@@ -1,5 +1,9 @@
-const messages = [{ id: "1", text: "hello", user: "test", added: "test time" }];
+const db = require("../db/queries");
 
-exports.indexGet = (req, res, next) => {
+async function indexGet(req, res, next) {
+  const messages = await db.getAllMessages();
   res.render("index", { messages: messages });
+}
+module.exports = {
+  indexGet,
 };

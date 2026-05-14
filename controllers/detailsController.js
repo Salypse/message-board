@@ -1,6 +1,10 @@
-const getMessageById = require("../utils/getMessage");
+const db = require("../db/queries");
 
-exports.detailsGet = (req, res, next) => {
-  const message = getMessageById(req.params.messageId);
+async function detailsGet(req, res, next) {
+  const message = await db.getMessageById(req.params.messageId);
   res.render("details", { message: message });
+}
+
+module.exports = {
+  detailsGet,
 };
