@@ -6,21 +6,23 @@
     <title>New Message</title>
     <link rel="stylesheet" href="/root.css" />
     <link rel="stylesheet" href="/navbar.css" />
+    <link rel="stylesheet" href="/errors.css" />
     <link rel="stylesheet" href="/form.css" />
   </head>
   <body>
     <%- include("navbar") %>
     <div class="new-message">
       <h2>New Message</h2>
+      <%- include("partials/errors.ejs") %>
       <form method="POST" action="/new ">
         <div>
           <label for="user">Name</label>
-          <input type="text" id="user" name="user" required />
+          <input type="text" id="user" name="user" />
         </div>
 
         <div>
           <label for="message">Message</label>
-          <input type="text" id="message" name="message" required />
+          <input type="text" id="message" name="message" />
         </div>
 
         <button type="submit" class="submit">Submit</button>

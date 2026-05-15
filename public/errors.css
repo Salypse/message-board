@@ -1,0 +1,6 @@
+.error-messages {
+  list-style-type: none;
+  text-align: center;
+  font-size: clamp(1rem, 3vw, 1.1rem);
+  padding: 0.5vh 0;
+}
